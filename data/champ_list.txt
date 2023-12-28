@@ -1,0 +1,312 @@
+Ahri
+Ahri Ahri	Gold 4
+K/DA K/DA
+Spellweaver Spellweaver
+700	30	40	Attack Range	0.80	32	POP/STAR	MP 0/30
+Akali (K/DA)
+ Akali (K/DA)	Gold 4
+K/DA K/DA
+Breakout Breakout
+Executioner Executioner
+950	50	60	Attack Range	0.85	51	The Baddest	MP 10/50
+Akali (True Damage)
+ Akali (True Damage)	Gold 4
+True Damage True Damage
+Breakout Breakout
+Executioner Executioner
+1000	65	70	Attack Range	0.90	63	Three Point Strike	MP 0/60
+Amumu
+ Amumu	Gold 3
+Emo Emo
+Guardian Guardian
+900	55	45	Attack Range	0.65	29	Tantrum	MP 0/45
+Annie
+ Annie	Gold 1
+Emo Emo
+Spellweaver Spellweaver
+450	20	40	Attack Range	0.65	26	Disintegrate	MP 0/50
+Aphelios
+ Aphelios	Gold 2
+Heartsteel Heartsteel
+Rapidfire Rapidfire
+600	20	55	Attack Range	0.75	41	Moonlight Lullaby	MP 40/135
+Bard
+ Bard	Gold 2
+Jazz Jazz
+Dazzler Dazzler
+550	20	40	Attack Range	0.70	28	Improv	MP 15/60
+Blitzcrank
+ Blitzcrank	Gold 4
+Disco Disco
+Sentinel Sentinel
+1000	60	60	Attack Range	0.60	36	Boogie Barrier	MP 60/120
+Caitlyn
+ Caitlyn	Gold 4
+8-bit 8-bit
+Rapidfire Rapidfire
+700	30	70	Attack Range	0.80	56	Champ Hunt	MP 0/90
+Corki
+ Corki	Gold 1
+8-bit 8-bit
+Big Shot Big Shot
+450	15	48	Attack Range	0.70	34	Blown to 8 Bits	MP 15/60
+Ekko
+ Ekko	Gold 3
+True Damage True Damage
+Sentinel Sentinel
+Spellweaver Spellweaver
+850	40	50	Attack Range	0.65	33	Record Scratch	MP 50/125
+Evelynn
+ Evelynn	Gold 1
+K/DA K/DA
+Crowd Diver Crowd Diver
+550	35	45	Attack Range	0.70	32	Whiplash	MP 30/90
+Ezreal
+ Ezreal	Gold 4
+Heartsteel Heartsteel
+Big Shot Big Shot
+700	30	70	Attack Range	0.85	60	Crash the Party	MP 0/40
+Garen
+ Garen	Gold 2
+8-bit 8-bit
+Sentinel Sentinel
+750	45	55	Attack Range	0.70	39	Power-Up!	MP 40/90
+Gnar
+ Gnar	Gold 2
+Pentakill Pentakill
+Mosher Mosher
+Superfan Superfan
+700	45	55	Attack Range	0.65	36	Rabid Fandom	MP 0/70
+Gragas
+ Gragas	Gold 2
+Disco Disco
+Bruiser Bruiser
+Spellweaver Spellweaver
+750	45	50	Attack Range	0.60	30	Boogie Hour	MP 40/80
+Illaoi
+ Illaoi	Gold 5
+ILLBEATS ILLBEATS
+Bruiser Bruiser
+1050	70	70	Attack Range	0.80	56	Drums of the Deep	MP 70/150
+Jax
+ Jax	Gold 2
+EDM EDM
+Mosher Mosher
+750	35	55	Attack Range	0.85	47	Counter Melody	MP 50/120
+Jhin
+ Jhin	Gold 5
+Maestro Maestro
+Big Shot Big Shot
+850	30	70	Attack Range	0.85	60	Concerto to Demise in D Minor	MP 0/50
+Jinx
+ Jinx	Gold 1
+Punk Punk
+Rapidfire Rapidfire
+450	15	45	Attack Range	0.70	32	Escalation	MP 0/50
+K'Sante
+ K'Sante	Gold 1
+Heartsteel Heartsteel
+Sentinel Sentinel
+650	40	50	Attack Range	0.60	30	Block the Haters	MP 0/40
+Kai'Sa
+ Kai'Sa	Gold 2
+K/DA K/DA
+Big Shot Big Shot
+600	20	55	Attack Range	0.75	41	Got the Boom	MP 0/30
+Karthus
+ Karthus	Gold 4
+Pentakill Pentakill
+Executioner Executioner
+700	30	40	Attack Range	0.75	30	Mortal Reminder	MP 40/120
+Katarina
+ Katarina	Gold 2
+Country Country
+Crowd Diver Crowd Diver
+650	35	40	Attack Range	0.70	28	Bouncing Blade	MP 0/60
+Kayle
+ Kayle	Gold 2
+Pentakill Pentakill
+Edgelord Edgelord
+550	20	35	Attack Range	0.75	26	Fires of Ascension	MP 0/30
+Kayn
+ Kayn	Gold 5
+Heartsteel Heartsteel
+Wildcard Wildcard
+Edgelord Edgelord
+1200	70	75	Attack Range	0.95	71	Fear the Reaper	MP 0/50
+Kennen
+ Kennen	Gold 1
+True Damage True Damage
+Guardian Guardian
+Superfan Superfan
+650	40	40	Attack Range	0.60	24	Shock and Awe	MP 30/90
+Lillia
+ Lillia	Gold 1
+K/DA K/DA
+Sentinel Sentinel
+Superfan Superfan
+600	40	50	Attack Range	0.55	28	Confetti Bloom	MP 70/140
+Lucian
+ Lucian	Gold 5
+Jazz Jazz
+Rapidfire Rapidfire
+850	30	65	Attack Range	0.90	59	Arpeggio	MP 50/125
+Lulu
+ Lulu	Gold 3
+Hyperpop Hyperpop
+Spellweaver Spellweaver
+650	20	40	Attack Range	0.70	28	Tastes like Glitter	MP 0/40
+Lux
+ Lux	Gold 3
+EDM EDM
+Dazzler Dazzler
+700	20	40	Attack Range	0.70	28	Laser Light Show	MP 15/75
+Miss Fortune
+ Miss Fortune	Gold 3
+Jazz Jazz
+Big Shot Big Shot
+650	20	55	Attack Range	0.75	41	Double Time	MP 0/60
+Mordekaiser
+ Mordekaiser	Gold 3
+Pentakill Pentakill
+Sentinel Sentinel
+850	55	60	Attack Range	0.65	39	Face-Melter	MP 70/120
+Nami
+ Nami	Gold 1
+Disco Disco
+Dazzler Dazzler
+450	15	40	Attack Range	0.75	30	Disco Prison	MP 15/75
+Neeko
+ Neeko	Gold 3
+K/DA K/DA
+Guardian Guardian
+Superfan Superfan
+850	50	50	Attack Range	0.60	30	Cosplay	MP 0/90
+Olaf
+ Olaf	Gold 1
+Pentakill Pentakill
+Bruiser Bruiser
+650	35	50	Attack Range	0.65	33	Berserker Rage	-
+Pantheon
+ Pantheon	Gold 2
+Punk Punk
+Guardian Guardian
+750	45	55	Attack Range	0.60	33	Too Tough To Kill	MP 0/60
+Poppy
+ Poppy	Gold 4
+Emo Emo
+Mosher Mosher
+1000	65	60	Attack Range	0.65	39	Hammer Time	MP 30/100
+Qiyana
+ Qiyana	Gold 5
+True Damage True Damage
+Crowd Diver Crowd Diver
+1050	60	75	Attack Range	0.90	68	Sample & Remix	MP 0/40
+Riven
+ Riven	Gold 3
+8-bit 8-bit
+Edgelord Edgelord
+800	40	60	Attack Range	0.75	45	Voxel Defense	MP 50/100
+Samira
+ Samira	Gold 3
+Country Country
+Executioner Executioner
+600	20	60	Attack Range	0.70	42	Thrills & Kills	MP 0/100
+Senna
+ Senna	Gold 2
+True Damage True Damage
+Rapidfire Rapidfire
+600	20	40	Attack Range	0.70	28	Concussive Noise	MP 30/90
+Seraphine
+ Seraphine	Gold 2
+K/DA K/DA
+Spellweaver Spellweaver
+550	25	40	Attack Range	0.70	28	High Note	MP 0/60
+Sett
+ Sett	Gold 3
+Heartsteel Heartsteel
+Bruiser Bruiser
+Mosher Mosher
+950	45	55	Attack Range	0.70	39	THE PUNCHLINE	MP 30/90
+Sona
+ Sona	Gold 5
+Mixmaster Mixmaster
+Spellweaver Spellweaver
+850	40	5	Attack Range	0.85	4	The Drop	MP 0/170
+Tahm Kench
+ Tahm Kench	Gold 1
+Country Country
+Bruiser Bruiser
+650	35	60	Attack Range	0.55	33	Rawhide	-
+Taric
+ Taric	Gold 1
+Disco Disco
+Guardian Guardian
+650	40	55	Attack Range	0.55	30	Mirrorball's Blessing	MP 50/140
+Thresh
+ Thresh	Gold 4
+Country Country
+Guardian Guardian
+1000	60	60	Attack Range	0.65	39	Devil's Round Up	MP 70/160
+Twisted Fate
+ Twisted Fate	Gold 4
+Disco Disco
+Dazzler Dazzler
+700	30	45	Attack Range	0.75	34	Hustle & Shuffle	MP 30/105
+Twitch
+ Twitch	Gold 2
+Punk Punk
+Executioner Executioner
+550	25	45	Attack Range	0.70	32	Bottled Anarchy	MP 20/70
+Urgot
+ Urgot	Gold 3
+Country Country
+Mosher Mosher
+750	45	60	Attack Range	0.75	45	Fire from his Fingertips	MP 0/20
+Vex
+ Vex	Gold 3
+Emo Emo
+Executioner Executioner
+700	20	40	Attack Range	0.75	30	Your Funeral	MP 25/75
+Vi
+ Vi	Gold 1
+Punk Punk
+Mosher Mosher
+650	45	55	Attack Range	0.60	33	The Harder They Fall	MP 40/70
+Viego
+ Viego	Gold 4
+Pentakill Pentakill
+Edgelord Edgelord
+1000	65	75	Attack Range	0.85	64	Riff of the Ruined King	MP 70/120
+Yasuo
+ Yasuo	Gold 1
+True Damage True Damage
+Edgelord Edgelord
+650	40	50	Attack Range	0.75	38	Synthesizer Strike	MP 0/50
+Yone
+ Yone	Gold 3
+Heartsteel Heartsteel
+Crowd Diver Crowd Diver
+Edgelord Edgelord
+800	40	65	Attack Range	0.80	52	Pop Off	MP 0/70
+Yorick
+ Yorick	Gold 5
+Pentakill Pentakill
+Guardian Guardian
+Mosher Mosher
+1050	60	88	Attack Range	0.80	70	GET IN THIS PIT! (ft. Ghouls)	MP 60/110
+Zac
+ Zac	Gold 4
+EDM EDM
+Bruiser Bruiser
+1100	60	50	Attack Range	0.65	33	Let's Bounce!	MP 60/130
+Zed
+ Zed	Gold 4
+EDM EDM
+Crowd Diver Crowd Diver
+1000	60	75	Attack Range	0.95	71	Shadow Dance	MP 30/50
+Ziggs
+ Ziggs	Gold 5
+Hyperpop Hyperpop
+Dazzler Dazzler
+800	40	45	Attack Range	0.80	36	Chaos Theory	MP 30/75

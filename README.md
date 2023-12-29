@@ -1,6 +1,34 @@
 # TFT Bot
 A discord bot for various TFT shenanigans.
 
+### @TFTBot --examples
+```
+examples:
+  **NOTE: All messages must start by tagging @TFTBot.**
+
+  That's Jazz, Baby - output a comp with Jazz 4 enabled, at most 5 champions on my board, with the max possible non-unique traits turned on:
+  `--num-champs 5 -t Jazz 4 -m max-non-unique-traits`
+  
+  
+  ... and I also have 2 spatulas to use:
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2`
+  
+  
+  ... and it's a multi-talent game (double headliner trait):
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented`
+  
+  
+  ... and I want Jhin and Qiyana on my team:
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana`
+  
+  
+  ... and I don't want Miss Fortune or Vex on my team:
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana -b MissFortune Vex`
+  
+  I don't know the names of all champs or traits:
+  `--list-champs --list-traits`
+```
+
 ### @TFTBot -h
 ```
 @TFTBot -h
@@ -32,34 +60,6 @@ options:
   --examples            List some example usages
 
 Use `@TFTBot --examples` for some ideas.
-```
-
-### @TFTBot --examples
-```
-examples:
-  **NOTE: All messages must start by tagging @TFTBot.**
-
-  That's Jazz, Baby - output a comp with Jazz 4 enabled, at most 5 champions on my board, with the max possible non-unique traits turned on:
-  `--num-champs 5 -t Jazz 4 -m max-non-unique-traits`
-  
-  
-  ... and I also have 2 spatulas to use:
-  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2`
-  
-  
-  ... and it's a multi-talent game (double headliner trait):
-  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented`
-  
-  
-  ... and I want Jhin and Qiyana on my team:
-  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana`
-  
-  
-  ... and I don't want Miss Fortune or Vex on my team:
-  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana -b MissFortune Vex`
-  
-  I don't know the names of all champs or traits:
-  `--list-champs --list-traits`
 ```
 
 ### @TFTBot --list-champs --list-traits

@@ -43,6 +43,14 @@ def test_max_non_unique_traits_many_champs_multi_talent_and_two_spatulas_and_not
     arr = "--num-champs 10 -p -m max-non-unique-traits -s 2 -b Bard MissFortune -t Jazz 4".split()
     t.main(arr)
 
+def test_help_example():
+    arr = "--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana -b MissFortune Vex".split()
+    t.main(arr)
+
+
+def test_help_example2():
+    arr = "--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented".split()
+    t.main(arr)
 
 """
 def test_list_champs():

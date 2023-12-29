@@ -1,6 +1,7 @@
 import itertools
 import argparse
 import sys
+import time
 
 import z3
 
@@ -21,7 +22,10 @@ Tasks:
 [] input blacklist for champs
 [x] output help lists
 [x] add basic tests
-[] discord bot
+[x] specify my headliner
+[] specify my headliner trait
+[x] return result as a string rather than printing
+[x] discord bot
 [] collin-mode
 """
 
@@ -51,33 +55,62 @@ spatula_trait_ints = {}
 
 solver = z3.Solver()
 
+example_usage = """
+examples:
+  **NOTE: All messages must start by tagging @TFTBot.**
 
-def parse_options(args):
-    parser = argparse.ArgumentParser()
+  That's Jazz, Baby - output a comp with Jazz 4 enabled, at most 5 champions on my board, with the max possible non-unique traits turned on:
+  `--num-champs 5 -t Jazz 4 -m max-non-unique-traits`
+  
+  
+  ... and I also have 2 spatulas to use:
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2`
+  
+  
+  ... and it's a multi-talent game (double headliner trait):
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented`
+  
+  
+  ... and I want Jhin and Qiyana on my team:
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana`
+  
+  
+  ... and I don't want Miss Fortune or Vex on my team:
+  `--num-champs 6 -t Jazz 4 -m max-non-unique-traits -s 2 --multi-talented -c Jhin Qiyana -b MissFortune Vex`
+  
+  I don't know the names of all champs or traits:
+  `--list-champs --list-traits`
+"""
+
+def parse_options():
+    parser = argparse.ArgumentParser(prog="@TFTBot", epilog="Use `@TFTBot --examples` for some ideas.")
     parser.add_argument("--mode", "-m", choices=["max-traits", "max-non-unique-traits"], default="max-traits")
-    parser.add_argument("-n", "--num-champs", help="Number of champs in your comp", default=3)
-    parser.add_argument("-s", "--spatulas", help="Specify the number of spatulas", default=0)
+    parser.add_argument("-n", "--num-champs", help="Number of champs in your comp", default=3, type=int, choices=range(0, 16), metavar="[0-16]")
+    parser.add_argument("-s", "--spatulas", help="Specify the number of spatulas", default=0, type=int, choices=range(0, 6), metavar="[0-5]")
+    parser.add_argument("-l", "--headliner", help="Specify the champ that must be my headliner", choices=tft.champs, metavar="CHAMP")
     parser.add_argument("-p",
                         "--multi-talented",
                         help="Use flag if the double headliner trait portal is active",
                         default=False,
                         action="store_true")
-    parser.add_argument('-c', "--champs", nargs='*', help="Champs that must be in your comp")
+    parser.add_argument('-c', "--champs", nargs='*', help="Champs that must be in your comp", choices=tft.champs, metavar="CHAMP NAMES")
     parser.add_argument('-t', "--traits", nargs='*',
-                        help="Traits that must be in your comp (example usage: -t Jazz 4 Emo 2")
-    parser.add_argument('-b', "--blacklist-champs", nargs='*', help="Champs that must not be in your comp")
+                        help="Traits that must be in your comp (example usage: -t Jazz 4 Emo 2)")
+    parser.add_argument('-b', "--blacklist-champs", nargs='*', help="Champs that must not be in your comp", choices=tft.champs, metavar="TRAIT NAMES")
 
     parser.add_argument( "--list-champs", help="List all possible champ names", default=False, action="store_true")
     parser.add_argument( "--list-traits", help="List all possible trait names", default=False, action="store_true")
-    args = parser.parse_args(args)
-    return args
+    parser.add_argument("--examples", help="List some example usages", default=False, action="store_true")
+    return parser
 
 
 def process_list_args(list_champs, list_traits):
+    result = ""
     if list_champs:
-        print("Champs: ", ", ".join(tft.champs))
+        result += "Champs: " + ", ".join(tft.champs) + "\n"
     if list_traits:
-        print("Traits: ", ", ".join(tft.traits))
+        result += "Traits: " + ", ".join(tft.traits) + "\n"
+    return result
 
 def setup_z3_vars():
     for i in tft.champs:
@@ -214,10 +247,10 @@ def setup_spatulas(spatulas):
 # TODO change for spatulas
 def display_results(args, is_sat, model):
     non_unique_traits = tft.get_non_unique_traits()
-    print()
+    result = ""
     if is_sat != z3.sat:
-        print("No solution")
-        return
+        result = "Impossible"
+        return result
 
     headliner_trait_str = ""
     multi_talent_trait_str = ""
@@ -235,18 +268,21 @@ def display_results(args, is_sat, model):
         if model.eval(headliner_champ_bools[champ]):
             headliner_str = "(" + headliner_trait_str + multi_talent_trait_str + ")"
         if model.eval(b):
-            print(champ + " " + headliner_str)
+            result += champ + " " + headliner_str + "\n"
 
     if args.spatulas:
-        print("---------")
+        result += "---------\n"
+        has_spatula = False
         for trait in spatula_trait_ints.keys():
             count = model.eval(spatula_trait_ints[trait])
             if int(str(count)) > 0:
-                print(trait, "spatulas", count)
+                result += trait + " Spatulas " + str(count) + "\n"
+                has_spatula = True
+        if not has_spatula:
+            result += "No spatulas used\n"
 
 
-    print("---------")
-
+    result += "---------\n"
     for trait, champs in tft.trait_champs.items():
         count = 0
         for champ in champs:
@@ -261,7 +297,8 @@ def display_results(args, is_sat, model):
 
         achieved_cutoffs = [i for i in tft.trait_cutoffs[trait] if count >= i]
         if achieved_cutoffs:
-            print(trait, achieved_cutoffs[-1])
+            result += trait + " " + str(achieved_cutoffs[-1]) + "\n"
+    return result
 
 
 def run_mode(args):
@@ -286,7 +323,6 @@ def setup_trait_requirements(traits):
     trait_cutoff_pairs = []
     for i in range(len(traits) // 2):
         trait_cutoff_pairs.append((traits[i*2], traits[i*2 + 1]))
-    print(trait_cutoff_pairs)
     non_unique_traits = tft.get_non_unique_traits()
     for trait, cutoff in trait_cutoff_pairs:
         c = traitcount_champ_ints[trait]
@@ -296,22 +332,41 @@ def setup_trait_requirements(traits):
             c = c + spatula_trait_ints[trait]
         solver.add(c >= cutoff)
 
+def setup_specified_headliner(specified_headlienr):
+    if specified_headlienr:
+        solver.add(headliner_champ_bools[specified_headlienr])
+
 def main(args):
-    args = parse_options(args)
-    process_list_args(args.list_champs, args.list_traits)
+    print("MAIN", args)
+    time.sleep(1)
+    parser = parse_options()
+    print("MAIN3")
+    print("MAIN4", args)
+    args = parser.parse_args(args)
+    print("MAIN2")
+    result = process_list_args(args.list_champs, args.list_traits)
+    if result:
+        return result
+    if args.examples:
+        return example_usage
     setup_z3_vars()
     setup_max_champs(args.num_champs)
     setup_trait_to_champs()
     setup_champ_restrictions()
     setup_headliners()
+    setup_specified_headliner(args.headliner)
     setup_multi_talented(args.multi_talented)
+    print("MAIN2")
     setup_spatulas(args.spatulas)
     setup_champ_requirements(args.champs)
     setup_trait_requirements(args.traits)
     setup_champ_blacklist(args.blacklist_champs)
+    print("END2")
     is_sat, model = run_mode(args)
-    display_results(args, is_sat, model)
-
+    result = display_results(args, is_sat, model)
+    print("END")
+    return result
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    result = main(sys.argv[1:])
+    print(result)

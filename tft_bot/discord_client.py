@@ -31,16 +31,19 @@ async def on_message(message):
             print("HERE")
             print(arr)
 
-            result = main.main(arr)
+            result = await main.main(arr)
             print("HERE3")
             print(result)
             print("AGAIN")
-            await message.channel.send(result)
+            if result:
+                await message.channel.send(result)
+            else:
+                parser = main.parse_options()
+                help = parser.format_help()
+                await message.channel.send(help)
             print("HERE2")
 
         except Exception as e:
-            print(e)
-            print("RTFM")
             parser = main.parse_options()
             help = parser.format_help()
             await message.channel.send(help)

@@ -336,13 +336,16 @@ def setup_specified_headliner(specified_headlienr):
     if specified_headlienr:
         solver.add(headliner_champ_bools[specified_headlienr])
 
-def main(args):
+async def main(args):
     print("MAIN", args)
     time.sleep(1)
     parser = parse_options()
     print("MAIN3")
     print("MAIN4", args)
-    args = parser.parse_args(args)
+    try:
+        args = parser.parse_args(args)
+    except:
+        return ""
     print("MAIN2")
     result = process_list_args(args.list_champs, args.list_traits)
     if result:
@@ -363,6 +366,7 @@ def main(args):
     setup_champ_blacklist(args.blacklist_champs)
     print("END2")
     is_sat, model = run_mode(args)
+    print("END2", is_sat)
     result = display_results(args, is_sat, model)
     print("END")
     return result
